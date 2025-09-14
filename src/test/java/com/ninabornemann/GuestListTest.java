@@ -47,9 +47,14 @@ class GuestListTest {
 
     @Test
     void shouldReadFromFileSystem() throws IOException {
-        GuestList guests = new GuestList();
-        guests.setGuests(Files.readAllLines(Path.of("guests_for_read_test.txt")));
+        GuestList guests = GuestList.parseFromDisc(Path.of("guests_for_read_test.txt"));
         assertEquals("[Max, Stephan]", guests.getGuests().toString());
+    }
+
+    @Test
+    void shouldThrowException() {
+        assertThrows(IOException.class, () -> Files.readAllLines(Path.of("guests2.txt")));
+        assertThrows(IOException.class, () -> GuestList.parseFromDisc(Path.of("guests2.txt")));
     }
 
 }
