@@ -1,7 +1,10 @@
-## 📜 GuestList
+[![Java CI with Maven](https://github.com/nina-bornemann/Guest_List/actions/workflows/maven.yml/badge.svg)](https://github.com/nina-bornemann/Guest_List/actions/workflows/maven.yml)
+
+## 📜 GuestList  
 
 A simple Java class to manage a guest list.
 Supports adding guests, saving the list to disk, and reading it back.
+
 ---
 
 ### 🚀 Features
